@@ -1,11 +1,11 @@
 """Tests for seizure window detection from predictions."""
 
 import numpy as np
+import pandas as pd
 
+from epilepsy_detection.config.settings import Settings
 from epilepsy_detection.detection.intervals import find_seizure_intervals, format_detection_report
 from epilepsy_detection.features.epoch_features import EpochFeatureExtractor
-from epilepsy_detection.config.settings import Settings
-import pandas as pd
 
 
 def test_find_single_seizure_window():

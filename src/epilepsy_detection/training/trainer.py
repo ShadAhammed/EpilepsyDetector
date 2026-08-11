@@ -27,7 +27,6 @@ from epilepsy_detection.config.settings import Settings
 from epilepsy_detection.models.classifier import SeizureClassifier
 from epilepsy_detection.models.imbalance import train_rusboost, train_smote_xgboost
 
-
 # Artifact file name written by SeizureTrainer.save()
 _MODEL_FILENAME = "seizure_model.joblib"
 

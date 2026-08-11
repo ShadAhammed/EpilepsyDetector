@@ -40,7 +40,7 @@ def test_health_endpoint():
 
 
 def test_predict_endpoint(tmp_path, monkeypatch):
-    model_path = _train_fixture_model(tmp_path)
+    _train_fixture_model(tmp_path)
     monkeypatch.setenv("EPILEPSY_MODEL_DIR", str(tmp_path / "models"))
 
     app = create_app()

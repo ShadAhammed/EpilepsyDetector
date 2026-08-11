@@ -8,7 +8,11 @@ from epilepsy_detection.data.annotations import SeizureInterval
 from epilepsy_detection.features.epoch_features import EpochFeatureExtractor
 
 
-def _synthetic_eeg(n_channels: int = 2, n_seconds: int = 30, sample_rate: int = 256) -> pd.DataFrame:
+def _synthetic_eeg(
+    n_channels: int = 2,
+    n_seconds: int = 30,
+    sample_rate: int = 256,
+) -> pd.DataFrame:
     rng = np.random.default_rng(42)
     n_samples = n_seconds * sample_rate
     data = rng.standard_normal((n_channels, n_samples))

@@ -60,7 +60,8 @@ class EpochFeatureExtractor(FeatureExtractor):
     Args:
         settings: Application settings.  Loaded from ``config/default.yaml``
             when not provided.
-        loader: EDF loader instance.  Defaults to :class:`~epilepsy_detection.data.edf_loader.EDFLoader`.
+        loader: EDF loader instance.  Defaults to
+            :class:`~epilepsy_detection.data.edf_loader.EDFLoader`.
     """
 
     def __init__(

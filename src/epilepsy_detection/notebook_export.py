@@ -21,7 +21,6 @@ from sklearn.preprocessing import MinMaxScaler
 
 from epilepsy_detection.config.settings import Settings
 from epilepsy_detection.models.classifier import SeizureClassifier
-from epilepsy_detection.training.trainer import SeizureTrainer, TrainingArtifacts
 
 _DEFAULT_OUTPUT = Path("models/seizure_model.joblib")
 
