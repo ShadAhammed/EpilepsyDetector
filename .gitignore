@@ -11,17 +11,26 @@ build/
 venv/
 env/
 
-# Jupyter / research notebooks (local only - never commit)
+# Jupyter / research notebooks (local only - never publish)
 /notebooks/
 .ipynb_checkpoints/
 *.ipynb
 
-# IDE
+# Optional / local-only docs and helpers (not required to run)
+/examples/
+scripts/export_from_kernel.py
+run_save_model.bat
+
+# IDE / editor / AI workspace
 .idea/
 .vscode/
+.cursor/
+.cursorrules
 *.swp
+*.swo
+*~
 
-# Clinical data and artifacts (root only) - never commit to public GitHub
+# Clinical data and trained artifacts (never publish)
 /data/**
 !/data/.gitkeep
 /models/**
@@ -29,19 +38,39 @@ env/
 /reports/
 *.edf
 *.parquet
+*.joblib
 !tests/fixtures/
 
-# Environment
+# Environment and secrets
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+**/service-account*.json
 
 # OS
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# Test / coverage
+# Test / coverage / logs
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
+.mypy_cache/
+.ruff_cache/
+*.log
+logs/
 
-# Cache
+# Cache and temp
 data/cache/
+tmp/
+temp/
+*.tmp
+*.bak
